@@ -13,6 +13,8 @@ public class VirtualAddressCalculator {
         // Program Explanantion
         System.out.println("This program will calculate the page number and offset.\n");
 
+
+        // GETTING USER INPUT ---------------------------------------------
         // Get page size
         System.out.print("Enter page size: ");
         int page_size_kb = scanner.nextInt();
@@ -21,6 +23,9 @@ public class VirtualAddressCalculator {
         System.out.print("Enter virtual address: ");
         int virtual_address = scanner.nextInt();
 
+
+
+        // Calculations ----------------------------------------------------
         // Converting the page size into bytes
         int page_size_bytes = page_size_kb * 1024;
 
@@ -28,9 +33,13 @@ public class VirtualAddressCalculator {
         int page_number = virtual_address / page_size_bytes;
         int offset = virtual_address % page_size_bytes;
 
-        // Output the results
+
+
+        // Output ----------------------------------------------------------
         System.out.println("The address " + virtual_address + " contains:\n\tpage number = " + page_number + "\n\toffset = " + offset);
 
+
+        
         scanner.close();
     }
 }
